@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -10,8 +11,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
@@ -24,18 +24,30 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                //resolve-url-loader may be chained before sass-loader if necessary
-                use: ['css-loader', 'sass-loader']
+                    fallback: 'style-loader',
+                    //resolve-url-loader may be chained before sass-loader if necessary
+                    use: ['css-loader', 'sass-loader']
+                })
+            },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    //resolve-url-loader may be chained before sass-loader if necessary
+                    use: ['css-loader']
                 })
             }
-        ]        
+        ]
     },
     plugins: [
-      new ExtractTextPlugin('/css/style.css')
-      //if you want to pass in options, you can do so:
-      //new ExtractTextPlugin({
-      //  filename: 'style.css'
-      //})
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
+        new ExtractTextPlugin('/css/style.css'),
+        //if you want to pass in options, you can do so:
+        //new ExtractTextPlugin({
+        //  filename: 'style.css'
+        //})
     ]
 };
