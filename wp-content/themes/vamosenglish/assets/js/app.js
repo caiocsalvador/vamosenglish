@@ -1,6 +1,19 @@
-/* IMPORT STYLES */
+/*
+===============================
+            STYLES
+===============================
+*/
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../sass/styles.scss';
-/* IMPORT JAVASCRIPT */
-/*import 'bootstrap';*/
+
+/*
+===============================
+          JAVASCRIPT
+===============================
+*/
+
+/* BOOTSTRAP */ 
+import 'bootstrap';
+/* MAIN */ 
 import './scripts.js';

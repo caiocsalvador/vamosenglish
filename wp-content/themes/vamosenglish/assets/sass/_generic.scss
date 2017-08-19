@@ -1,0 +1,52 @@
+@include scrollbars(.5em, #282828, rgba(0, 0, 0, 0));
+
+a{
+	@include animate(all, 320ms);
+	&:hover,
+	&:before,
+	&:after{
+		@include animate(all, 320ms);
+		text-decoration: none;
+		img{
+			@include animate(all, 320ms);
+		}
+	}
+	img{
+		@include animate(all, 320ms);
+	}
+}
+
+ul{
+    list-style: none;
+    padding-left: 0px;
+    li{
+    	list-style: none;
+    }
+}
+
+h1, h2, h3{
+	color: $text-color;
+	font-family: $title-font;
+}
+
+h4, h5{
+	color: $text-color;
+	font-family: $subtitle-font;
+}
+
+p, span, i, b, time, small, caption{
+	color: $text-color;
+	font-family: $text-font;
+}
+
+li, a{
+	color: $text-color;
+	font-family: $subtitle-font;
+}
+
+.gradient-text {
+	font-size: 72px;
+	background: -webkit-linear-gradient(#eee, #333);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  }

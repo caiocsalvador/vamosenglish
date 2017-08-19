@@ -8,7 +8,8 @@ module.exports = {
     },
     output: {
         filename: './js/bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/dist'
     },
     module: {
         rules: [{
@@ -26,7 +27,7 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     //resolve-url-loader may be chained before sass-loader if necessary
-                    use: ['css-loader', 'sass-loader']
+                    use: ['css-loader?url=false', 'sass-loader']
                 })
             },
             {
@@ -34,7 +35,7 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     //resolve-url-loader may be chained before sass-loader if necessary
-                    use: ['css-loader']
+                    use: ['css-loader?url=false']
                 })
             }
         ]
@@ -42,7 +43,8 @@ module.exports = {
     plugins: [
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery'
+            jQuery: 'jquery',
+            Popper: 'popper.js'
         }),
         new ExtractTextPlugin('/css/style.css'),
         //if you want to pass in options, you can do so:

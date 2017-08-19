@@ -4,7 +4,8 @@ function my_theme_setup(){
 
 	/* MENUS */
 	add_theme_support('menus');
-	register_nav_menu('primary', "Primary Header Navigation");
+	register_nav_menu('top', "Top Navigation");
+	register_nav_menu('main', "Main Header Navigation");
 
 	/* THUMBNAILS */
 	add_theme_support('post-thumbnails');
