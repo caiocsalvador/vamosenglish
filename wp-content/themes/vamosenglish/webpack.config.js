@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+
+
 module.exports = {
     entry: {
         app: './assets/js/app.js',
@@ -43,13 +45,19 @@ module.exports = {
     plugins: [
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery',
-            Popper: 'popper.js'
+            jQuery: 'jquery',            
+            Popper: 'popper.js',
+            'window.jQuery': 'jquery',
         }),
         new ExtractTextPlugin('/css/style.css'),
         //if you want to pass in options, you can do so:
         //new ExtractTextPlugin({
         //  filename: 'style.css'
         //})
-    ]
+    ],
+    resolve: {
+        alias: {
+            'waypoints': 'waypoints/lib/jquery.waypoints.js'
+        }
+    }
 };

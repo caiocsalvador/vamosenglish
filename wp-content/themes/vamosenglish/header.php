@@ -18,10 +18,10 @@
 				<div class="cont-lines d-flex flex-column">
 					<div class="top-header d-flex flex-row justify-content-end">
 						<div class="social-header">
-							<a href="#" class="social-icon insta"></i></a>
-							<a href="#" class="social-icon tt"></a>
-							<a href="#" class="social-icon face"></a>
-							<a href="#" class="social-icon whats"></a>
+							<a href="#" class="social-icon shadow-5 insta"></i></a>
+							<a href="#" class="social-icon shadow-5 tt"></a>
+							<a href="#" class="social-icon shadow-5 face"></a>
+							<a href="#" class="social-icon shadow-5 whats"></a>
 						</div>
 						<nav class="top-menu">
 							<?php wp_nav_menu(array('theme_location'=>'top')); ?>
@@ -34,7 +34,3 @@
 			</div>	
 		</div>		
 	</header>
-	<div class="search-form-container">
-		<?php get_search_form(); ?>
-	</div>
-	

@@ -1,0 +1,368 @@
+@import 'variables';
+@import 'typography';
+@import 'colors';
+@import 'mixins';
+@import 'generic';
+
+/*
+===============================
+            HEADER
+===============================
+*/
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .logo{
+        width: 250px;
+        height: 214px;
+        position: relative;
+        z-index: 1;
+        text-indent: -2000px; 
+        display: inline-block;
+        &:before{
+            content: "";
+            width: 655px;
+            height: 244px;
+            position: absolute;
+            top: 0;
+            left: -200px;
+            background-image: url($images-root + 'logo-bg.png');
+            z-index: -1;
+        }
+        a{
+            text-indent: -2000px;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .cont-lines{
+        position: relative;
+        z-index: 2;
+    }
+    .top-header{
+        z-index: 2;
+        padding-top: 35px;
+        .social-header{
+            .social-icon{
+                width: 45px;
+                height: 45px;                
+                border-radius: 50%;
+                position: relative;
+                display: inline-block;
+                margin-right: 5px;
+                &.insta{
+                    background-color: $instagram-color;
+                    &:hover{
+                        background-color: $instagram-hover;
+                    } 
+                    &:after{
+                        content: "\F16D";
+                        font-family: FontAwesome;
+                        font-style: normal;
+                        font-weight: normal;
+                        text-decoration: inherit;
+                        position: absolute;
+                        font-size: 28px;
+                        color: #ffffff;
+                        top: 50%;
+                        left: 50%;
+                        margin: -21px 0 0 -12px;
+                        z-index: 1;                     
+                    }                    
+                }
+                &.tt{
+                    background-color: $twitter-color;
+                    &:hover{
+                        background-color: $twitter-hover;
+                    } 
+                    &:after{
+                        content: "\F099";
+                        font-family: FontAwesome;
+                        font-style: normal;
+                        font-weight: normal;
+                        text-decoration: inherit;
+                        position: absolute;
+                        font-size: 28px;
+                        color: #ffffff;
+                        top: 50%;
+                        left: 50%;
+                        margin: -21px 0 0 -13px;
+                        z-index: 1;                      
+                    }                    
+                }
+                &.face{
+                    background-color: $facebook-color;
+                    &:hover{
+                        background-color: $facebook-hover;
+                    } 
+                    &:after{
+                        content: "\F09A";
+                        font-family: FontAwesome;
+                        font-style: normal;
+                        font-weight: normal;
+                        text-decoration: inherit;
+                        position: absolute;
+                        font-size: 28px;
+                        color: #ffffff;
+                        top: 50%;
+                        left: 50%;
+                        margin: -20px 0 0 -9px;
+                        z-index: 1;                     
+                    }                
+                }
+                &.whats{
+                    background-color: $whatsapp-color;
+                    &:hover{
+                        background-color: $whatsapp-hover;
+                    } 
+                    &:after{
+                        content: "\F232";
+                        font-family: FontAwesome;
+                        font-style: normal;
+                        font-weight: normal;
+                        text-decoration: inherit;
+                        position: absolute;
+                        font-size: 28px;
+                        color: #ffffff;
+                        top: 50%;
+                        left: 50%;
+                        margin: -22px 0 0 -12px;
+                        z-index: 1;                      
+                    }                    
+                }
+            }
+        }
+        .menu-top-menu-container{
+            .menu{
+                li{
+                    font-family: $subtitle-font;
+                    a{
+                        font-family: $subtitle-font;
+                        padding: 14px 25px;
+                        color: $white;
+                        background-color: $blue;
+                        font-weight: 700;
+                        border-radius: 30px;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        display: inline-block;
+                        margin-left: 5px;
+                        letter-spacing: 1px;
+                        -webkit-box-shadow: 0px 15px 50px 0px rgba(0,0,0,0.3);
+                        -moz-box-shadow: 0px 15px 50px 0px rgba(0,0,0,0.3);
+                        box-shadow: 0px 15px 50px 0px rgba(0,0,0,0.3);
+                        &:hover{
+                            background-color: $hover-color;
+                        }
+                    }
+                }
+            }
+        }        
+    }
+    .menu{
+        li{
+            display: inline-block;
+        }        
+    }
+    .main-menu{
+        margin-top: 30px;
+        ul{
+            li{
+                a{
+                    color: $white;
+                    font-size: 17px;
+                    margin-left: 35px;
+                    display: inline-block;
+                    font-family: $subtitle-font;                 
+                }
+                &:first-child{
+                    a{
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+===============================
+            MAIN
+===============================
+*/
+
+.home-banner{
+    width: 100%;
+    height: 700px;
+    background-image: url($images-root + 'home-bg.jpg');
+    padding-top: 300px;
+    text-align: center;
+    background-position: center;
+    h2{
+        color: $white;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    p{
+        font-weight: 300;
+        font-size: 18px;
+        max-width: 650px;
+        color: $white;
+        display: inline-block;
+        line-height: 25px;
+        b{
+            color: $white;
+            font-weight: 600;
+        }
+    }
+    .cont-bnt{
+        width: 100%;
+        text-align: center;
+        display: block;
+        .btn-plus{
+            margin-top: 30px;
+            font-size: 14px;
+            color: $white;
+            padding: 15px 90px;
+            font-family: "Montserrat", sans-serif;
+            display: inline-block;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+            border: 1px solid $white;
+            border-radius: 40px;
+            &:hover{
+                background-color: $white;
+                color: $blue;
+            }
+        }
+    }
+}
+
+#blog{
+    padding-top: 70px;
+    padding-bottom: 30px;
+    .posts-list{
+        margin-top: 60px;
+        padding-bottom: 1000px;
+        .post{
+            @include transform(translateX(1000px));
+            @include animate(all, 1000ms);
+            opacity: 0;
+            &.on-view{
+                @include transform(translateX(0px));
+                @include animate(all, 1000ms);
+                opacity: 1;
+            }            
+            .post-thumbnail{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 150px;
+                overflow: hidden;
+                margin-bottom: 15px;
+                img{
+                    min-width: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+                    &:hover{
+                        opacity: 0.8;
+                        min-width: 110%;
+                        min-height: 110%;
+                    }
+                }
+            }
+            h3{
+                color: $blue;
+                font-family: $subtitle-font;
+                font-size: 1rem;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                line-height: 23px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                a{
+                    color: $blue;
+                    &:hover{
+                        color: $hover-color;
+                    }
+                }
+            }
+            span{
+                margin-bottom: 15px;
+                display: block;
+                font-size: 0.85rem;
+            }
+            p{
+                line-height: 30px;
+                a{
+                    font-family: $text-font;
+                    &:hover{
+                        color: $blue;
+                    }
+                }
+            }
+            .cont-link-post{
+                margin-top: 30px;
+                .link-post{
+                    color: $link-color;
+                    font-family: $subtitle-font;
+                    font-size: 0.9rem;
+                    font-weight: 700;
+                    letter-spacing: 0.5px;
+                    line-height: 25px;
+                    text-transform: uppercase;
+                    position: relative;                    
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $link-color;
+                        top: 0px;
+                        left: 0px;
+                    }
+                    &:hover{
+                        color: $hover-color;
+                        &:before{
+                            background-color: $hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.title{
+    font-size: 60px;
+    color: $blue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    &:before{
+        content: "";
+        background-image: url($images-root + 'icon-title.png');
+        background-position: left;
+        background-repeat: no-repeat;
+        width: 48px;
+        height: 61px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+/*
+===============================
+            FOOTER
+===============================
+*/

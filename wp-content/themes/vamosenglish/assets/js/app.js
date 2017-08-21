@@ -5,7 +5,7 @@
 */
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../sass/styles.scss';
+import '../sass/style.scss';
 
 /*
 ===============================
@@ -15,5 +15,6 @@ import '../sass/styles.scss';
 
 /* BOOTSTRAP */ 
 import 'bootstrap';
+
 /* MAIN */ 
 import './scripts.js';
