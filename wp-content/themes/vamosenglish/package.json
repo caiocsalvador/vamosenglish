@@ -26,6 +26,7 @@
     "bootstrap": "^4.0.0-beta",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.3",
+    "slick-carousel": "^1.7.1",
     "waypoints": "^4.0.1"
   }
 }

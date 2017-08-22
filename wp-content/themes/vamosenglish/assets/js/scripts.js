@@ -1,29 +1,12 @@
+
 /* WAYPOINTS */ 
+window.jQuery = window.$ = require("jquery");
 require('waypoints/lib/jquery.waypoints.js');
-
-$(document).ready(function () {
-	//Show Itens when loaded
-	$(".hide-on-start").removeClass("hide-on-start").addClass("show");
-});
-
-var posts = $(".post");
-/* Show the posts */ 
-var waypoint = new Waypoint({	
-	element: document.querySelector('.post'),	
-	handler: function(direction) {
-		posts.each(function(index, ele){
-			setTimeout(function() {
-				console.log(index);
-				$(ele).addClass("on-view");
-			}, (index+1)*300);
-		});
-	},
-	offset: '50%'
-});
+require('slick-carousel/slick/slick.js');
 
 // Detect objectFit support
 if ('objectFit' in document.documentElement.style === false) {
-
+	
 	// assign HTMLCollection with parents of images with objectFit to variable
 	var container = document.getElementsByClassName('post-thumbnail');
 
@@ -45,4 +28,39 @@ if ('objectFit' in document.documentElement.style === false) {
 		// Add background-position: center center
 		container[i].style.backgroundPosition = 'center center';
 	}
+}
+
+$(document).ready(function () {
+	//Show Itens when loaded
+	$(".hide-on-start").removeClass("hide-on-start").addClass("show");
+
+	var posts = $(".animated.post");
+	animate(posts);
+
+	var services = $(".animated.service");
+	animate(services);	
+
+	$('.carousel-testimonials').slick({
+		slidesToShow: 1,
+		autoplay: true,
+		autoplaySpeed: 7000,
+	});
+	
+});
+
+function animate(itens){
+	
+	$(itens).each(function(index, ele){
+		
+		var self = $(this);
+	
+		$(this).waypoint({
+			handler: function(direction){
+				setTimeout(function() {
+					$(ele).addClass("on-view");
+				}, (index+1)*100);
+			},
+			offset: '75%'
+		});
+	});
 }

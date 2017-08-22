@@ -2,6 +2,10 @@ html{
 	width: 100%;
 	overflow-x: hidden;
 }
+body{
+	display: inline-block;
+    width: 100%;
+}
 
 @include scrollbars(.5em, #282828, rgba(0, 0, 0, 0));
 
@@ -32,16 +36,28 @@ ul{
 h1, h2, h3{
 	color: $text-color;
 	font-family: $title-font;
+	a{
+		font-family: $title-font;
+		color: $text-color;
+	}
 }
 
 h4, h5{
 	color: $text-color;
 	font-family: $subtitle-font;
+	a{
+		color: $text-color;
+		font-family: $subtitle-font;
+	}
 }
 
 p, span, i, b, time, small, caption{
 	color: $text-color;
 	font-family: $text-font;
+	a{
+		color: $text-color;
+		font-family: $text-font;
+	}
 }
 
 li, a{
@@ -73,4 +89,35 @@ li, a{
 .show{
 	opacity: 1;
 	@include animate(all, 2000ms);
+}
+
+.animated{
+	opacity: 0;
+	&.a-right{
+		@include transform(translateX(1500px));
+		@include animate(all, 1000ms);
+	}
+	&.a-left{
+		@include transform(translateX(-1500px));
+		@include animate(all, 1000ms);
+	}
+	&.a-down{
+		@include transform(translateY(50px));
+		@include animate(all, 1000ms);
+	}
+	&.on-view{	
+		opacity: 1;
+		&.a-right{
+			@include transform(translateX(0px));
+			@include animate(all, 1000ms);
+		}
+		&.a-left{
+			@include transform(translateX(0px));
+			@include animate(all, 1000ms);
+		}
+		&.a-down{
+			@include transform(translateX(0px));
+			@include animate(all, 1000ms);
+		}
+	}	
 }

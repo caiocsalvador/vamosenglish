@@ -134,3 +134,14 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-1', endColorstr='$color-3', GradientType=1);
     /* IE6-9 fallback on horizontal gradient */
 }
+
+@mixin gradient-text($color-1, $color-2){
+    background: -webkit-linear-gradient($color-1, $color-2);
+    /* FF3.6-15 */
+    background: -moz-linear-gradient($color-1, $color-2);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient($color-1, $color-2);
+    -webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

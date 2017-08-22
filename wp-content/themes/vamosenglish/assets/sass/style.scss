@@ -253,7 +253,7 @@ header{
     padding-bottom: 30px;
     .posts-list{
         margin-top: 60px;
-        padding-bottom: 1000px;
+        padding-bottom: 40px;
         .post{
             @include transform(translateX(1000px));
             @include animate(all, 1000ms);
@@ -274,10 +274,12 @@ header{
                     min-width: 100%;
                     min-height: 100%;
                     object-fit: cover;
+                    @include animate(all, 320ms);
                     &:hover{
                         opacity: 0.8;
                         min-width: 110%;
                         min-height: 110%;
+                        @include animate(all, 320ms);
                     }
                 }
             }
@@ -343,6 +345,172 @@ header{
     }
 }
 
+#services{
+    background-color: $light-gray;
+    padding: 50px 0px;
+    overflow: hidden;
+    .list-services{
+        margin-top: 50px;
+        .service{
+            margin-bottom: 50px;
+            .service-thumbnail{
+                text-align: center;
+                margin-bottom: 10px;
+                a{
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 50%;
+                    padding: 7px;
+                    border: 1.5px dashed transparent;
+                    box-sizing: content-box;
+                    display: inline-block;
+                    &:hover{
+                        border: 1.5px dashed $blue;
+                    }                
+                    img{
+                        width: 130px;
+                        height: 130px;
+                    }  
+                }       
+            }
+            h3{
+                text-align: center;
+                font-weight: 700;
+                a{
+                    color: $blue;
+                    font-size: 20px;
+                    &:hover{
+                        color: $hover-color;
+                    }
+                }
+            }
+            p{
+                text-align: center;
+            }
+        }
+    }
+}
+
+#testimonials{
+    height: 380px;
+    background-image: url($images-root + 'bg-testimonial.jpg');    
+    .carousel-testimonials{
+        .testimonial{
+            outline: none;
+        }
+        .quotes{
+            margin-right: 20px;
+        }
+        .cont-person{
+            margin-right: 30px;
+            margin-top: 10px;
+            .person-img{
+                width: 105px;
+                height: 105px;
+                border-radius: 50%;
+                position: relative;
+                &:after{
+                    content: "\F09A";
+                    width: 28px;
+                    height: 28px;
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: inherit;
+                    position: absolute;
+                    font-size: 12px;
+                    color: #ffffff;
+                    top: 95%;
+                    left: 75%;
+                    margin: -20px 0 0 -9px;
+                    background-color: $facebook-color;
+                    text-align: center;
+                    padding-top: 5px;
+                    border-radius: 50%;
+                    z-index: 1;                     
+                }
+            }
+        }
+        p{
+            font-size: 1.2rem;
+            line-height: 26px;
+            font-weight: 400;
+            color: $white;
+            font-family: $title-font;
+        }
+        .cont-signature{
+            span{
+                font-size: 1.2rem;
+                line-height: 26px;
+                font-weight: 400;
+                color: $white;
+                font-family: $title-font;
+                padding: 10px 40px;
+                border: 1px solid $white;
+                border-radius: 40px;
+                margin-right: 20px;
+                small{
+                    font-size: 0.8rem;
+                    color: $white;
+                    font-family: $title-font;
+                }
+            }
+        }
+        .slick-prev {
+            left: 0px;
+            background-image: url($images-root + 'prev.png'); 
+            width: 45px;
+            height: 45px;
+            z-index: 2;
+            top: 85%;
+            &:before{
+                content: "";
+                font-size: 0;
+            }
+        }
+        .slick-next {
+            right: 0px;
+            background-image: url($images-root + 'next.png'); 
+            width: 45px;
+            height: 45px;
+            z-index: 2;
+            top: 85%;
+            &:before{
+                content: "";
+                font-size: 0;
+            }
+        }
+    }
+}
+
+#reservation{
+    background-image: url($images-root + 'bg-reservation.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 70px 0px;
+    p{
+        text-align: center;
+    }
+    .cont-btn{
+        text-align: center;
+        .btn-reservation{
+            color: $purple;
+            display: inline-block;
+            font-size: 0.9rem;
+            font-family: $subtitle-font;
+            padding: 14px 115px;
+            padding-top: 17px;
+            border-radius: 40px;
+            border: 1px solid $purple;
+            margin-top: 20px;
+            &:hover{
+                color: $white;
+                background-color: $purple;
+            }
+        }
+    }    
+}
+
 .title{
     font-size: 60px;
     color: $blue;
@@ -361,8 +529,152 @@ header{
     }
 }
 
+.title-description{
+    font-family: $title-font;
+    font-size: 1rem;
+}
+
 /*
 ===============================
             FOOTER
 ===============================
 */
+
+footer{
+    .logo-footer{
+        margin-right: 50px;
+    }
+    .cont-footer{
+        border-top: 1px dashed $pink;
+        padding: 15px 0px;
+    }
+    .social-footer{
+        .social-icon{
+            width: 45px;
+            height: 45px;                
+            border-radius: 50%;
+            position: relative;
+            display: inline-block;
+            margin-right: 5px;
+            &.insta{
+                background-color: $instagram-color;
+                &:hover{
+                    background-color: $instagram-hover;
+                } 
+                &:after{
+                    content: "\F16D";
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: inherit;
+                    position: absolute;
+                    font-size: 28px;
+                    color: #ffffff;
+                    top: 50%;
+                    left: 50%;
+                    margin: -21px 0 0 -12px;
+                    z-index: 1;                     
+                }                    
+            }
+            &.tt{
+                background-color: $twitter-color;
+                &:hover{
+                    background-color: $twitter-hover;
+                } 
+                &:after{
+                    content: "\F099";
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: inherit;
+                    position: absolute;
+                    font-size: 28px;
+                    color: #ffffff;
+                    top: 50%;
+                    left: 50%;
+                    margin: -21px 0 0 -13px;
+                    z-index: 1;                      
+                }                    
+            }
+            &.face{
+                background-color: $facebook-color;
+                &:hover{
+                    background-color: $facebook-hover;
+                } 
+                &:after{
+                    content: "\F09A";
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: inherit;
+                    position: absolute;
+                    font-size: 28px;
+                    color: #ffffff;
+                    top: 50%;
+                    left: 50%;
+                    margin: -20px 0 0 -9px;
+                    z-index: 1;                     
+                }                
+            }
+            &.whats{
+                background-color: $whatsapp-color;
+                &:hover{
+                    background-color: $whatsapp-hover;
+                } 
+                &:after{
+                    content: "\F232";
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: inherit;
+                    position: absolute;
+                    font-size: 28px;
+                    color: #ffffff;
+                    top: 50%;
+                    left: 50%;
+                    margin: -22px 0 0 -12px;
+                    z-index: 1;                      
+                }                    
+            }
+        }
+    }
+    .infos-footer p{
+        text-align: right;
+        padding-right: 25px;
+        background-position: right;
+        background-repeat: no-repeat;
+        position: relative;
+        color: $dark-purple;
+        font-size: 0.9rem;
+        font-family: $subtitle-font;
+        line-height: 20px;
+        margin-bottom: 5px;
+        &.address{
+            &:after{
+                content: "\f041";
+                position: absolute;
+                font-family: FontAwesome;
+                right: 4px;
+                color: $light-green;
+            }
+        }
+        &.email{
+            &:after{
+                content: "\f0e0";
+                position: absolute;
+                font-family: FontAwesome;
+                right: 0;
+                color: $light-green;
+            }
+        }
+        &.phone{
+            &:after{
+                content: "\f095";
+                position: absolute;
+                font-family: FontAwesome;
+                right: 1px;
+                color: $light-green;
+            }
+        }
+    }
+}
