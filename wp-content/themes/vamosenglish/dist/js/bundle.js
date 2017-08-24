@@ -10332,15 +10332,15 @@ return jQuery;
 
 __webpack_require__(2);
 
-__webpack_require__(15);
-
-__webpack_require__(16);
-
 __webpack_require__(3);
 
 __webpack_require__(4);
 
-__webpack_require__(7);
+__webpack_require__(5);
+
+__webpack_require__(6);
+
+__webpack_require__(9);
 
 /***/ }),
 /* 2 */
@@ -10356,6 +10356,18 @@ __webpack_require__(7);
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery, Popper) {/*!
@@ -14189,10 +14201,10 @@ var Popover = function ($) {
 
 
 })();
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(7)))
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16638,10 +16650,10 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(8)))
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports) {
 
 var g;
@@ -16668,16 +16680,16 @@ module.exports = g;
 
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {
+/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, $) {
 
 /* WAYPOINTS */
-window.jQuery = window.$ = __webpack_require__(0);
-__webpack_require__(13);
-__webpack_require__(14);
+__webpack_provided_window_dot_jQuery = window.$ = __webpack_require__(0);
+__webpack_require__(10);
+__webpack_require__(11);
 
 // Detect objectFit support
 if ('objectFit' in document.documentElement.style === false) {
@@ -16710,10 +16722,13 @@ $(document).ready(function () {
 	$(".hide-on-start").removeClass("hide-on-start").addClass("show");
 
 	var posts = $(".animated.post");
-	animate(posts);
+	animateWithDelay(posts);
 
 	var services = $(".animated.service");
-	animate(services);
+	animateWithDelay(services);
+
+	var widgets = $(".widget");
+	animate(widgets);
 
 	$('.carousel-testimonials').slick({
 		slidesToShow: 1,
@@ -16722,7 +16737,7 @@ $(document).ready(function () {
 	});
 });
 
-function animate(itens) {
+function animateWithDelay(itens) {
 
 	$(itens).each(function (index, ele) {
 
@@ -16738,18 +16753,28 @@ function animate(itens) {
 		});
 	});
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+function animate(itens) {
+
+	$(itens).each(function (index, ele) {
+
+		var self = $(this);
+
+		$(this).waypoint({
+			handler: function handler(direction) {
+				$(ele).addClass("on-view");
+			},
+			offset: '75%'
+		});
+	});
+}
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(0)))
 
 /***/ }),
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
-/***/ (function(module, exports) {
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/*!
+/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*!
 Waypoints - 4.0.1
 Copyright © 2011-2016 Caleb Troughton
 Licensed under the MIT license.
@@ -17336,7 +17361,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 ;(function() {
   'use strict'
 
-  var $ = window.jQuery
+  var $ = __webpack_provided_window_dot_jQuery
   var Waypoint = window.Waypoint
 
   function JQueryAdapter(element) {
@@ -17403,17 +17428,18 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     }
   }
 
-  if (window.jQuery) {
-    window.jQuery.fn.waypoint = createExtension(window.jQuery)
+  if (__webpack_provided_window_dot_jQuery) {
+    __webpack_provided_window_dot_jQuery.fn.waypoint = createExtension(__webpack_provided_window_dot_jQuery)
   }
   if (window.Zepto) {
     window.Zepto.fn.waypoint = createExtension(window.Zepto)
   }
 }())
 ;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 14 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -20412,18 +20438,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 }));
 
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

@@ -264,21 +264,20 @@ header{
                 opacity: 1;
             }            
             .post-thumbnail{
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 height: 150px;
                 overflow: hidden;
                 margin-bottom: 15px;
                 img{
-                    min-width: 100%;
-                    min-height: 100%;
+                    width: 100%;
+                    height: 100%;
                     object-fit: cover;
                     @include animate(all, 320ms);
                     &:hover{
                         opacity: 0.8;
-                        min-width: 110%;
-                        min-height: 110%;
+                        width: 110%;
+                        height: 110%;
+                        margin-left: -5%;
+                        margin-top: -5%;
                         @include animate(all, 320ms);
                     }
                 }
@@ -294,15 +293,25 @@ header{
                 margin-bottom: 10px;
                 a{
                     color: $blue;
+                    font-family: $subtitle-font;
                     &:hover{
                         color: $hover-color;
                     }
                 }
             }
             span{
-                margin-bottom: 15px;
+                margin-bottom: 10px;
                 display: block;
                 font-size: 0.85rem;
+            }
+            small{
+                padding-left: 22px;
+                margin-bottom: 15px;
+                display: block;
+                background-image: url($images-root + 'icon-comments.png');
+                background-repeat: no-repeat;
+                background-position: left bottom;
+                font-weight: 700;
             }
             p{
                 line-height: 30px;
@@ -338,6 +347,15 @@ header{
                         &:before{
                             background-color: $hover-color;
                         }
+                    }
+                }
+                .addtoany-cont{
+                    margin-top: -10px;
+                    .addtoany_shortcode{
+                        outline: none;
+                    }
+                    .a2a_dd.addtoany_share_save{
+                        outline: none;
                     }
                 }
             }
@@ -527,6 +545,10 @@ header{
         display: inline-block;
         margin-right: 10px;
     }
+    &.text-left{
+        text-align: left;
+        justify-content: left;
+    }
 }
 
 .title-description{
@@ -678,3 +700,22 @@ footer{
         }
     }
 }
+
+
+/*
+===============================
+          INNER PAGES
+===============================
+*/
+
+/* BLOG */
+@import 'blog';
+
+/*
+===============================
+           SIDEBAR
+===============================
+*/
+
+/* BLOG */
+@import 'sidebar';

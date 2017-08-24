@@ -35,10 +35,13 @@ $(document).ready(function () {
 	$(".hide-on-start").removeClass("hide-on-start").addClass("show");
 
 	var posts = $(".animated.post");
-	animate(posts);
+	animateWithDelay(posts);
 
 	var services = $(".animated.service");
-	animate(services);	
+	animateWithDelay(services);	
+
+	var widgets = $(".widget");
+	animate(widgets);
 
 	$('.carousel-testimonials').slick({
 		slidesToShow: 1,
@@ -48,7 +51,7 @@ $(document).ready(function () {
 	
 });
 
-function animate(itens){
+function animateWithDelay(itens){
 	
 	$(itens).each(function(index, ele){
 		
@@ -59,6 +62,21 @@ function animate(itens){
 				setTimeout(function() {
 					$(ele).addClass("on-view");
 				}, (index+1)*100);
+			},
+			offset: '75%'
+		});
+	});
+}
+
+function animate(itens){
+	
+	$(itens).each(function(index, ele){
+		
+		var self = $(this);
+	
+		$(this).waypoint({
+			handler: function(direction){
+				$(ele).addClass("on-view");
 			},
 			offset: '75%'
 		});

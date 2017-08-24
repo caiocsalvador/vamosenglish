@@ -1,3 +1,12 @@
+			<section id="reservation">
+				<div class="container">
+					<p><img src="<?php echo get_template_directory_uri(); ?>/assets/img/gradient-text.png" alt="&iquest;Y ahora, esta listo para comenzar su aventura con nosotros?"></p>
+					<div class="cont-btn">
+						<a href="#" class="btn-reservation">RESERVAR AHORA</a>
+					</div>			
+				</div>
+			</section>
+		</main>
 		<footer>
 			<div class="container">
 				<div class="cont-footer d-flex flex-wrap align-items-center">
