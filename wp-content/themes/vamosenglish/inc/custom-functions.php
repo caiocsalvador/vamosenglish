@@ -4,11 +4,13 @@
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
 
+/* Remove WP version information from the header */ 
 function remove_wp_version(){
 	return '';
 }
 add_filter('the_generator', 'remove_wp_version');
 
+/* Creating widgets / sidebars */ 
 function my_widgets() {
 
     register_sidebar( 
@@ -36,14 +38,15 @@ function my_widgets() {
 	);
 
 }
-
 add_action( 'widgets_init', 'my_widgets' );
 
+/* New funcition for excerpt length */ 
 function custom_excerpt_length( $length ) {
 	return $length;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+/* Change excerpt more */ 
 function wpdocs_excerpt_more( $more ) {
     return '';
 }
@@ -73,72 +76,5 @@ function excerpt($limit) {
     return $args;
 }
 add_filter ( 'widget_tag_cloud_args', 'myfunc_filter_tag_cloud');
-
-/*
-=======================================
-	CREATE POST TYPE AND TAXONOMIES
-=======================================
-*/
-
-/* SERVICES */
-
-add_action('init', 'create_services');
-
-function create_services(){
-	$labels = array(
-		'name' 				=> 'Services',
-		'singular_name' 	=> 'Services',
-		'menu_name' 		=> 'Services',
-		'name_admin_bar' 	=> 'Services',
-	);
-	$args = array(
-		'labels' 			=> $labels,
-		'show_ui'			=> true,
-		'show_in_menu'		=> true,
-		'capability_type'	=> 'post',
-		'taxonomies'  		=> array( 'categories_services' ),
-		'hierarchical'		=> false,
-		'menu_icon'			=> 'dashicons-awards',
-		'supports'			=> array('title', 'editor', 'author', 'thumbnail'),
-		'public' 			=> true,
-      	'has_archive' 		=> true,
-		'rewrite' 			=> array('slug' => 'cat_services'),
-		'menu_position'		=> 5
-	);
-
-	register_post_type('services', $args);
-}
-
-function categories_services(){
-
-	//add new taxonomy hierarchical
-
-	$labels = array(
-		'name' => 'categories',
-		'singular_name' => 'Category',
-		'search_item' => 'Search Category',
-		'all_items' => 'All Category',
-		'parent_item' => 'Parent Category',
-		'parent_item_colon' => 'Parent Category:',
-		'edit_item' => 'Edit Category',
-		'update_item' => 'Update Category',
-		'add_new_item' => 'Add Category',
-		'new_item_name' => 'New Category',
-		'menu_name' => 'Services Categories',
-	);
-
-	$args = array(
-		'hierarchical' => true,
-		'labels' => $labels,
-		'show_ui' => true,
-		'show_admin_column' => true,
-		'query_var' => true,
-	);
-
-	register_taxonomy('categories_services', array('services'), $args);
-
-}
-
-add_action('init', 'categories_services');
 
 ?>

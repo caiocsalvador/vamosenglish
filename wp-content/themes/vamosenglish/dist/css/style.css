@@ -828,34 +828,35 @@ header {
   overflow: hidden; }
   #services .list-services {
     margin-top: 50px; }
-    #services .list-services .service {
-      margin-bottom: 50px; }
-      #services .list-services .service .service-thumbnail {
-        text-align: center;
-        margin-bottom: 10px; }
-        #services .list-services .service .service-thumbnail a {
-          width: 130px;
-          height: 130px;
-          border-radius: 50%;
-          padding: 7px;
-          border: 1.5px dashed transparent;
-          box-sizing: content-box;
-          display: inline-block; }
-          #services .list-services .service .service-thumbnail a:hover {
-            border: 1.5px dashed #226ace; }
-          #services .list-services .service .service-thumbnail a img {
-            width: 130px;
-            height: 130px; }
-      #services .list-services .service h3 {
-        text-align: center;
-        font-weight: 700; }
-        #services .list-services .service h3 a {
-          color: #226ace;
-          font-size: 20px; }
-          #services .list-services .service h3 a:hover {
-            color: #526df9; }
-      #services .list-services .service p {
-        text-align: center; }
+
+.service {
+  margin-bottom: 50px; }
+  .service .service-thumbnail {
+    text-align: center;
+    margin-bottom: 10px; }
+    .service .service-thumbnail a {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      padding: 7px;
+      border: 1.5px dashed transparent;
+      box-sizing: content-box;
+      display: inline-block; }
+      .service .service-thumbnail a:hover {
+        border: 1.5px dashed #226ace; }
+      .service .service-thumbnail a img {
+        width: 130px;
+        height: 130px; }
+  .service h3 {
+    text-align: center;
+    font-weight: 700; }
+    .service h3 a {
+      color: #226ace;
+      font-size: 20px; }
+      .service h3 a:hover {
+        color: #526df9; }
+  .service p {
+    text-align: center; }
 
 #testimonials {
   height: 380px;
@@ -1264,6 +1265,220 @@ footer .infos-footer p {
     .pagination ul li span {
       background-color: #343538;
       color: #ffffff; }
+
+#inner .single {
+  margin-bottom: 50px; }
+  #inner .single h2,
+  #inner .single h3,
+  #inner .single h4,
+  #inner .single h5 {
+    font-family: "Montserrat", sans-serif;
+    color: #226ace;
+    display: block;
+    margin-top: 30px; }
+  #inner .single h2 {
+    font-size: 1.5rem; }
+  #inner .single h3,
+  #inner .single h4,
+  #inner .single h5 {
+    font-size: 1rem; }
+  #inner .single span {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 0.85rem; }
+  #inner .single p {
+    text-align: justify;
+    line-height: 32px; }
+  #inner .single img {
+    max-width: 100%; }
+  #inner .single .alignright {
+    float: right; }
+  #inner .single .alignleft {
+    float: left; }
+  #inner .single img.alignright {
+    padding: 10px 0px 10px 10px;
+    box-sizing: content-box; }
+  #inner .single img.alignleft {
+    padding: 10px 10px 10px 0px;
+    box-sizing: content-box; }
+  #inner .single img.aligncenter {
+    padding: 10px 10px 10px 10px;
+    box-sizing: content-box;
+    display: block;
+    margin: 0 auto; }
+  #inner .single .single-thumb {
+    text-align: center;
+    margin-bottom: 20px; }
+  #inner .single .post h2:first-child {
+    margin-top: 0px; }
+  #inner .single form textarea {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    resize: none;
+    height: 150px;
+    outline: none;
+    -webkit-transition: all 320ms ease;
+    -moz-transition: all 320ms ease;
+    -ms-transition: all 320ms ease;
+    -o-transition: all 320ms ease;
+    transition: all 320ms ease; }
+    #inner .single form textarea:focus {
+      border-color: #8b23a9;
+      -webkit-transition: all 320ms ease;
+      -moz-transition: all 320ms ease;
+      -ms-transition: all 320ms ease;
+      -o-transition: all 320ms ease;
+      transition: all 320ms ease; }
+  #inner .single form input {
+    border: 1px solid #e6e6e6;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    text-indent: 5px;
+    -webkit-transition: all 320ms ease;
+    -moz-transition: all 320ms ease;
+    -ms-transition: all 320ms ease;
+    -o-transition: all 320ms ease;
+    transition: all 320ms ease; }
+    #inner .single form input:focus {
+      border-color: #8b23a9;
+      -webkit-transition: all 320ms ease;
+      -moz-transition: all 320ms ease;
+      -ms-transition: all 320ms ease;
+      -o-transition: all 320ms ease;
+      transition: all 320ms ease; }
+  #inner .single form input[type="submit"] {
+    color: #8b23a9;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+    padding: 8px 40px;
+    width: auto;
+    line-height: 30px;
+    height: auto;
+    background-color: transparent;
+    border-radius: 40px;
+    border: 1px solid #8b23a9;
+    margin-top: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 700;
+    -webkit-transition: all 320ms ease;
+    -moz-transition: all 320ms ease;
+    -ms-transition: all 320ms ease;
+    -o-transition: all 320ms ease;
+    transition: all 320ms ease; }
+    #inner .single form input[type="submit"]:hover {
+      color: #ffffff;
+      background-color: #8b23a9;
+      -webkit-transition: all 320ms ease;
+      -moz-transition: all 320ms ease;
+      -ms-transition: all 320ms ease;
+      -o-transition: all 320ms ease;
+      transition: all 320ms ease; }
+  #inner .single #comments {
+    margin-top: 100px; }
+  #inner .single .comment-respond span {
+    display: inline-block;
+    margin-bottom: 0px; }
+  #inner .single .comment-respond .comment-notes {
+    font-size: 0.85rem; }
+  #inner .single .comment-respond p {
+    margin-bottom: 0px; }
+  #inner .single .comment-respond input {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    text-indent: 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    outline: none;
+    color: #8a8a8a; }
+    #inner .single .comment-respond input:focus {
+      border-color: #8b23a9; }
+  #inner .single .comment-respond input[type="submit"] {
+    color: #8b23a9;
+    text-indent: 0px;
+    width: auto;
+    height: auto;
+    line-height: 30px;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+    padding: 8px 40px;
+    background-color: transparent;
+    border-radius: 40px;
+    border: 1px solid #8b23a9;
+    margin-top: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 700;
+    -webkit-transition: all 320ms ease;
+    -moz-transition: all 320ms ease;
+    -ms-transition: all 320ms ease;
+    -o-transition: all 320ms ease;
+    transition: all 320ms ease; }
+    #inner .single .comment-respond input[type="submit"]:hover {
+      color: #ffffff;
+      background-color: #8b23a9;
+      -webkit-transition: all 320ms ease;
+      -moz-transition: all 320ms ease;
+      -ms-transition: all 320ms ease;
+      -o-transition: all 320ms ease;
+      transition: all 320ms ease; }
+  #inner .single .comment-respond label {
+    margin-top: 10px; }
+  #inner .single ol.commentlist {
+    list-style: none;
+    margin: 0 0 1em;
+    padding: 0;
+    text-indent: 0; }
+    #inner .single ol.commentlist li.comment {
+      border-bottom: 1px solid #e6e6e6;
+      padding: 1em; }
+      #inner .single ol.commentlist li.comment div.vcard {
+        font-weight: 14px; }
+        #inner .single ol.commentlist li.comment div.vcard img.avatar {
+          border: 2px solid #e6e6e6;
+          float: right;
+          margin: 0 0 20px 20px; }
+      #inner .single ol.commentlist li.comment div.comment-meta {
+        font-size: 11px; }
+        #inner .single ol.commentlist li.comment div.comment-meta a {
+          color: #e6e6e6; }
+      #inner .single ol.commentlist li.comment p {
+        font-size: 12px; }
+      #inner .single ol.commentlist li.comment ul {
+        font-size: 12px;
+        list-style: none;
+        margin: 0 0 0 20px; }
+      #inner .single ol.commentlist li.comment div.reply {
+        font-size: 11px; }
+        #inner .single ol.commentlist li.comment div.reply a {
+          font-weight: bold; }
+      #inner .single ol.commentlist li.comment ul.children {
+        list-style: none;
+        margin: 12px;
+        text-indent: 0; }
+        #inner .single ol.commentlist li.comment ul.children li.depth-2 {
+          border-left: 5px solid #e6e6e6;
+          margin: 0 0 10px 10px; }
+        #inner .single ol.commentlist li.comment ul.children li.depth-3 {
+          border-left: 5px solid #bbb;
+          margin: 0 0 10px 10px; }
+        #inner .single ol.commentlist li.comment ul.children li.depth-4 {
+          border-left: 5px solid #aaa;
+          margin: 0 0 10px 10px; }
+    #inner .single ol.commentlist li.even {
+      background: #fff; }
+    #inner .single ol.commentlist li.odd {
+      background: #f6f6f6; }
+    #inner .single ol.commentlist li.parent {
+      border-left: 5px solid #e6e6e6; }
 
 /*
 ===============================

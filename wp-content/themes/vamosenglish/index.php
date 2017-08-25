@@ -16,7 +16,7 @@
 		<div class="container">
 			<h2 class="title hide-on-start">Blog</h2>
 			<div class="posts-list">
-				<div class="row">
+				<div class="row">				
 					<?php
 						$args = array(
 							'posts_per_page' => 4
@@ -36,64 +36,21 @@
 	<section id="services">
 		<div class="container">
 			<h2 class="title">Servicios</h2>
-			<p class="text-center title-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-			Sed sequi omnis dolor fugit vitae delectus obcaecati ratione.</p>
+			<p class="text-center title-description">En Vamos English te ayudamos a encontrar el mejor curso de inglés en <br> cualquiera de nuestras escuelas certificadas, acompañado de un completo programa académico.</p>
 			<div class="list-services">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="service animated a-down">
-							<div class="service-thumbnail">
-								<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/actividades_sociales.png" alt="Actividades Sociales"></a>
-							</div>
-							<h3><a href="#">Actividades Sociales</a></h3>
-							<p><a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur adipisicing elit.</a></p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="service animated a-down">
-							<div class="service-thumbnail">
-								<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/transportacion_del_aeroporto.png" alt="Transportacion Del Aeroporto"></a>
-							</div>
-							<h3><a href="#">Transportacion Del Aeroporto</a></h3>
-							<p><a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur adipisicing elit.</a></p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="service animated a-down">
-							<div class="service-thumbnail">
-								<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/consulta_de_visa.png" alt="Consulta de Visa"></a>
-							</div>
-							<h3><a href="#">Consulta de Visa</a></h3>
-							<p><a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur adipisicing elit.</a></p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="service animated a-down">
-							<div class="service-thumbnail">
-								<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/atencion_al_cliente.png" alt="Atención al Cliente"></a>
-							</div>
-							<h3><a href="#">Atención al Cliente</a></h3>
-							<p><a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur adipisicing elit.</a></p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="service animated a-down">
-							<div class="service-thumbnail">
-								<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/cotizacion_gratuita.png" alt="Cotización Gratuita"></a>
-							</div>
-							<h3><a href="#">Cotización Gratuita</a></h3>
-							<p><a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur adipisicing elit.</a></p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="service animated a-down">
-							<div class="service-thumbnail">
-								<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/soporte_en_tu_cv_ingles.png" alt=""></a>
-							</div>
-							<h3><a href="#">Soporte en tu CV en Ingles</a></h3>
-							<p><a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur adipisicing elit.</a></p>
-						</div>
-					</div>
+				<div class="row">				
+					<?php $args = array(
+						'posts_per_page'   => -1,
+						'post_type'        => 'services'
+					);
+					?>
+					<? $query = new WP_Query($args);?>
+					<? if ( $query->have_posts() ): ?>
+						<? while ( $query->have_posts() ) : $query->the_post()?>
+							<?php get_template_part('template-parts/services-home'); ?>
+						<? endwhile; ?>
+					<? endif; ?>
+					<?php wp_reset_postdata(); ?>
 				</div>				
 			</div>
 		</div>

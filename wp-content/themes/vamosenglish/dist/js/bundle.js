@@ -16735,6 +16735,8 @@ $(document).ready(function () {
 		autoplay: true,
 		autoplaySpeed: 7000
 	});
+
+	$(".comment-form-url").hide();
 });
 
 function animateWithDelay(itens) {

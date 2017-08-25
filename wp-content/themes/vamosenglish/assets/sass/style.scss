@@ -368,44 +368,44 @@ header{
     padding: 50px 0px;
     overflow: hidden;
     .list-services{
-        margin-top: 50px;
-        .service{
-            margin-bottom: 50px;
-            .service-thumbnail{
-                text-align: center;
-                margin-bottom: 10px;
-                a{
-                    width: 130px;
-                    height: 130px;
-                    border-radius: 50%;
-                    padding: 7px;
-                    border: 1.5px dashed transparent;
-                    box-sizing: content-box;
-                    display: inline-block;
-                    &:hover{
-                        border: 1.5px dashed $blue;
-                    }                
-                    img{
-                        width: 130px;
-                        height: 130px;
-                    }  
-                }       
-            }
-            h3{
-                text-align: center;
-                font-weight: 700;
-                a{
-                    color: $blue;
-                    font-size: 20px;
-                    &:hover{
-                        color: $hover-color;
-                    }
-                }
-            }
-            p{
-                text-align: center;
+        margin-top: 50px;        
+    }
+}
+.service{
+    margin-bottom: 50px;
+    .service-thumbnail{
+        text-align: center;
+        margin-bottom: 10px;
+        a{
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            padding: 7px;
+            border: 1.5px dashed transparent;
+            box-sizing: content-box;
+            display: inline-block;
+            &:hover{
+                border: 1.5px dashed $blue;
+            }                
+            img{
+                width: 130px;
+                height: 130px;
+            }  
+        }       
+    }
+    h3{
+        text-align: center;
+        font-weight: 700;
+        a{
+            color: $blue;
+            font-size: 20px;
+            &:hover{
+                color: $hover-color;
             }
         }
+    }
+    p{
+        text-align: center;
     }
 }
 
@@ -710,6 +710,7 @@ footer{
 
 /* BLOG */
 @import 'blog';
+@import "single";
 
 /*
 ===============================

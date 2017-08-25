@@ -3,9 +3,10 @@
         <?php
         $category = get_the_category();
         $firstCategory = $category[0]->cat_name;
+        $cat_slug = $category[0]->slug; 
         ?>				
         <h3><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h3>
-        <span><time><?php the_date(); ?></time> &bull; by  <?php the_author(); ?> | <?= $firstCategory?> </span>
+        <span><time><?php the_date(); ?></time> &bull; by  <?php the_author(); ?> | <a href="<?=home_url();?>/category/<?=$cat_slug?>"><?= $firstCategory?></a> </span>
         <small><?php comments_number( '0', '1', '%' ); ?></small>
         <?php if ( has_post_thumbnail() ) :?>
         <div class="post-thumbnail">            

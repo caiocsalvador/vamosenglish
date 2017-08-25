@@ -1,0 +1,265 @@
+#inner {
+    .single {
+        margin-bottom: 50px;
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: $subtitle-font;
+            color: $blue;
+            display: block;
+            margin-top: 30px;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        h3,
+        h4,
+        h5 {
+            font-size: 1rem;
+        }
+        span {
+            margin-bottom: 10px;
+            display: block;
+            font-size: 0.85rem;
+        }
+        p {
+            text-align: justify;
+            line-height: 32px;
+        }
+        img {
+            max-width: 100%;
+        }
+        .alignright {
+            float: right;
+        }
+        .alignleft {
+            float: left;
+        }
+        img.alignright {
+            padding: 10px 0px 10px 10px;
+            box-sizing: content-box;
+        }
+        img.alignleft {
+            padding: 10px 10px 10px 0px;
+            box-sizing: content-box;
+        }
+        img.aligncenter {
+            padding: 10px 10px 10px 10px;
+            box-sizing: content-box;
+            display: block;
+            margin: 0 auto;
+        }
+        .single-thumb {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .post h2:first-child{
+            margin-top: 0px;
+        }
+        form {
+            textarea {
+                width: 100%;
+                padding: 5px 10px;
+                border: 1px solid $borders-color;
+                border-radius: 5px;
+                resize: none;
+                height: 150px;
+                outline: none;
+                @include animate(all, 320ms);
+                &:focus {
+                    border-color: $purple;
+                    @include animate(all, 320ms);
+                }
+            }
+            input {
+                border: 1px solid $borders-color;
+                width: 100%;
+                height: 48px;
+                line-height: 48px;
+                text-indent: 5px;
+                @include animate(all, 320ms);
+                &:focus {
+                    border-color: $purple;
+                    @include animate(all, 320ms);
+                }
+            }
+            input[type="submit"] {
+                color: $purple;
+                display: inline-block;
+                font-size: 0.9rem;
+                font-family: $subtitle-font;
+                padding: 8px 40px;
+                width: auto;
+                line-height: 30px;
+                height: auto;
+                background-color: transparent;
+                border-radius: 40px;
+                border: 1px solid $purple;
+                margin-top: 20px;
+                text-transform: uppercase;
+                cursor: pointer;
+                font-size: 0.8rem;
+                font-weight: 700;
+                @include animate(all, 320ms);
+                &:hover {
+                    color: $white;
+                    background-color: $purple;
+                    @include animate(all, 320ms);
+                }
+            }
+        }
+        #comments{
+            margin-top: 100px;
+        }
+        .comment-respond{
+            span{
+                display: inline-block;
+                margin-bottom: 0px;
+            }
+            .comment-notes{
+                font-size: 0.85rem;
+            }
+            p{
+                margin-bottom: 0px;
+            }
+            input{
+                width: 100%;
+                height: 48px;
+                line-height: 48px;
+                text-indent: 10px;
+                border: 1px solid $borders-color;
+                border-radius: 5px;
+                outline: none;
+                color: $text-color;
+                &:focus{
+                    border-color: $purple;
+                }
+            }
+            input[type="submit"] {
+                color: $purple;
+                text-indent: 0px;
+                width: auto;
+                height: auto;
+                line-height: 30px;
+                display: inline-block;
+                font-size: 0.9rem;
+                font-family: $subtitle-font;
+                padding: 8px 40px;
+                background-color: transparent;
+                border-radius: 40px;
+                border: 1px solid $purple;
+                margin-top: 20px;
+                text-transform: uppercase;
+                cursor: pointer;
+                font-size: 0.8rem;
+                font-weight: 700;
+                @include animate(all, 320ms);
+                &:hover {
+                    color: $white;
+                    background-color: $purple;
+                    @include animate(all, 320ms);
+                }
+            }
+            label{
+                margin-top: 10px;
+            }
+        }
+        ol.commentlist {
+            list-style: none;
+            margin: 0 0 1em;
+            padding: 0;
+            text-indent: 0;
+            li {}
+            li.alt {}
+            li.bypostauthor {}
+            li.byuser {}
+            li.comment-author-admin {}
+            li.comment {
+                border-bottom: 1px solid $borders-color;
+                padding: 1em;
+                .comment-author {}
+                // end .comment-author
+                div.vcard {
+                    font-weight: 14px;
+                    cite.fn {
+                        a.url {}
+                    } // end cite.fn
+                    img.avatar {
+                        border: 2px solid $borders-color;
+                        float: right;
+                        margin: 0 0 20px 20px;
+                    } // end .avatar
+                    img.avatar-32 {}
+                    // end .avatar-32
+                    img.photo {}
+                    // end .photo
+                    span.says {}
+                    // ebd .says
+                } // end .vcard
+                div.commentmetadata {}
+                // end .commentmetadata
+                div.comment-meta {
+                    font-size: 11px;
+                    a {
+                        color: $borders-color;
+                    } // end a
+                } // end div.comment-meta
+                p {
+                    font-size: 12px;
+                } // end p
+                ul {
+                    font-size: 12px;
+                    list-style: none;
+                    margin: 0 0 0 20px;
+                } // end ul
+                div.reply {
+                    font-size: 11px;
+                    a {
+                        font-weight: bold;
+                    } // end a
+                } // end reply
+                ul.children {
+                    list-style: none;
+                    margin: 12px;
+                    text-indent: 0;
+                    li {}
+                    // end li
+                    li.alt {}
+                    li.bypostauthor {}
+                    li.byuser {}
+                    li.comment {}
+                    li.comment-author-admin {}
+                    li.depth-2 {
+                        border-left: 5px solid $borders-color;
+                        margin: 0 0 10px 10px;
+                    }
+                    li.depth-3 {
+                        border-left: 5px solid #bbb;
+                        margin: 0 0 10px 10px;
+                    }
+                    li.depth-4 {
+                        border-left: 5px solid #aaa;
+                        margin: 0 0 10px 10px;
+                    }
+                    li.depth-5 {}
+                    // you get the idea
+                    li.odd {}
+                    // end .odd
+                } // end ul.children
+            } // end li.comment
+            li.even {
+                background: #fff;
+            }
+            li.odd {
+                background: #f6f6f6;
+            }
+            li.parent {
+                border-left: 5px solid $borders-color;
+            }
+            li.thread-alt {}
+            li.thread-even {}
+            li.thread-odd {}
+        } // end commentlist
+    }
+}
