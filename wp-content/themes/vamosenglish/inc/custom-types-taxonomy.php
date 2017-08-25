@@ -148,7 +148,7 @@ function create_testimonials(){
 		'taxonomies'  		=> array( 'categories_testimonials' ),
 		'hierarchical'		=> false,
 		'menu_icon'			=> 'dashicons-format-status',
-		'supports'			=> array('title', 'editor', 'author', 'thumbnail'),
+		'supports'			=> array('title', 'editor', 'author', 'thumbnail', 'excerpt'),
 		'public' 			=> true,
       	'has_archive' 		=> true,
 		'rewrite' 			=> true,

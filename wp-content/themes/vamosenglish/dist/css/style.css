@@ -629,7 +629,8 @@ header {
           margin: -22px 0 0 -12px;
           z-index: 1; }
     header .top-header .menu-top-menu-container .menu li {
-      font-family: "Montserrat", sans-serif; }
+      font-family: "Montserrat", sans-serif;
+      position: relative; }
       header .top-header .menu-top-menu-container .menu li a {
         font-family: "Montserrat", sans-serif;
         padding: 14px 25px;
@@ -650,15 +651,143 @@ header {
   header .menu li {
     display: inline-block; }
   header .main-menu {
-    margin-top: 30px; }
-    header .main-menu ul li a {
-      color: #ffffff;
-      font-size: 17px;
-      margin-left: 35px;
-      display: inline-block;
-      font-family: "Montserrat", sans-serif; }
-    header .main-menu ul li:first-child a {
-      margin-left: 0px; }
+    margin-top: 20px; }
+    header .main-menu ul li {
+      padding: 15px;
+      position: relative; }
+      header .main-menu ul li:hover {
+        background-color: #226ace;
+        border-radius: 10px; }
+        header .main-menu ul li:hover .sub-menu {
+          display: block;
+          opacity: 1;
+          -webkit-transition: all 320ms ease;
+          -moz-transition: all 320ms ease;
+          -ms-transition: all 320ms ease;
+          -o-transition: all 320ms ease;
+          transition: all 320ms ease; }
+      header .main-menu ul li a {
+        color: #ffffff;
+        font-size: 17px;
+        margin-left: 0px;
+        display: inline-block;
+        font-family: "Montserrat", sans-serif; }
+        header .main-menu ul li a:hover {
+          color: #2db9a1; }
+      header .main-menu ul li:first-child a {
+        margin-left: 0px; }
+    header .main-menu .sub-menu {
+      display: none;
+      opacity: 0;
+      position: absolute;
+      width: 630px;
+      background-color: #226ace;
+      padding: 15px 30px;
+      left: 0px;
+      top: 45px;
+      -moz-column-count: 2;
+      -moz-column-gap: 30px;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 30px;
+      column-count: 2;
+      column-gap: 30px;
+      border-radius: 5px;
+      -webkit-transition: all 320ms ease;
+      -moz-transition: all 320ms ease;
+      -ms-transition: all 320ms ease;
+      -o-transition: all 320ms ease;
+      transition: all 320ms ease; }
+      header .main-menu .sub-menu li {
+        width: 100%;
+        border-bottom: 1px solid #73a0d7;
+        padding: 15px 0px;
+        border-radius: 0px; }
+        header .main-menu .sub-menu li:nth-child(3), header .main-menu .sub-menu li:nth-child(6), header .main-menu .sub-menu li:nth-child(9) {
+          border-bottom: none; }
+        header .main-menu .sub-menu li:hover {
+          border-radius: 0px; }
+        header .main-menu .sub-menu li a {
+          font-weight: 300; }
+  header .main-menu > div > ul > li:hover > a {
+    color: #2db9a1; }
+
+.cont-fixed-menu {
+  position: fixed;
+  background-color: #226ace;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 320ms ease;
+  -moz-transition: all 320ms ease;
+  -ms-transition: all 320ms ease;
+  -o-transition: all 320ms ease;
+  transition: all 320ms ease; }
+  .cont-fixed-menu.show {
+    opacity: 1;
+    pointer-events: all;
+    -webkit-transition: all 320ms ease;
+    -moz-transition: all 320ms ease;
+    -ms-transition: all 320ms ease;
+    -o-transition: all 320ms ease;
+    transition: all 320ms ease; }
+  .cont-fixed-menu .fixed-logo {
+    display: inline-block;
+    padding: 10px;
+    padding-top: 5px; }
+  .cont-fixed-menu .fixed-menu {
+    display: inline-block; }
+    .cont-fixed-menu .fixed-menu ul {
+      display: flex;
+      margin-bottom: 0px; }
+      .cont-fixed-menu .fixed-menu ul li {
+        padding: 15px;
+        padding-top: 10px;
+        position: relative; }
+        .cont-fixed-menu .fixed-menu ul li:hover .sub-menu {
+          display: block;
+          opacity: 1; }
+        .cont-fixed-menu .fixed-menu ul li a {
+          color: #ffffff;
+          font-size: 0.8rem; }
+          .cont-fixed-menu .fixed-menu ul li a:hover {
+            color: #2db9a1; }
+        .cont-fixed-menu .fixed-menu ul li .sub-menu {
+          display: none;
+          opacity: 0;
+          position: absolute;
+          width: 630px;
+          background-color: #226ace;
+          padding: 15px 30px;
+          left: 0px;
+          top: 45px;
+          -moz-column-count: 2;
+          -moz-column-gap: 30px;
+          -webkit-column-count: 2;
+          -webkit-column-gap: 30px;
+          column-count: 2;
+          column-gap: 30px;
+          border-radius: 5px;
+          -webkit-transition: all 320ms ease;
+          -moz-transition: all 320ms ease;
+          -ms-transition: all 320ms ease;
+          -o-transition: all 320ms ease;
+          transition: all 320ms ease; }
+          .cont-fixed-menu .fixed-menu ul li .sub-menu li {
+            width: 100%;
+            border-bottom: 1px solid #73a0d7;
+            padding: 15px 0px;
+            border-radius: 0px; }
+            .cont-fixed-menu .fixed-menu ul li .sub-menu li:nth-child(3), .cont-fixed-menu .fixed-menu ul li .sub-menu li:nth-child(6), .cont-fixed-menu .fixed-menu ul li .sub-menu li:nth-child(9) {
+              border-bottom: none; }
+            .cont-fixed-menu .fixed-menu ul li .sub-menu li:hover {
+              border-radius: 0px; }
+            .cont-fixed-menu .fixed-menu ul li .sub-menu li a {
+              font-weight: 300; }
+  .cont-fixed-menu .fixed-menu > div > ul > li:hover > a {
+    color: #2db9a1; }
 
 /*
 ===============================
@@ -1265,6 +1394,9 @@ footer .infos-footer p {
     .pagination ul li span {
       background-color: #343538;
       color: #ffffff; }
+      .pagination ul li span.dots {
+        background-color: transparent;
+        color: #343538; }
 
 #inner .single {
   margin-bottom: 50px; }
@@ -1290,7 +1422,8 @@ footer .infos-footer p {
     text-align: justify;
     line-height: 32px; }
   #inner .single img {
-    max-width: 100%; }
+    max-width: 100%;
+    height: auto; }
   #inner .single .alignright {
     float: right; }
   #inner .single .alignleft {
@@ -1479,6 +1612,49 @@ footer .infos-footer p {
       background: #f6f6f6; }
     #inner .single ol.commentlist li.parent {
       border-left: 5px solid #e6e6e6; }
+  #inner .single table {
+    margin-top: 60px;
+    margin-bottom: 60px; }
+    #inner .single table thead th {
+      vertical-align: bottom;
+      border: none; }
+    #inner .single table .border {
+      border: 1px solid #ebebeb;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 0.7rem;
+      text-decoration: underline; }
+      #inner .single table .border.bg-gray {
+        background-color: #F2F2F2; }
+    #inner .single table .blue {
+      color: #226ace;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif; }
+      #inner .single table .blue a {
+        color: #226ace; }
+        #inner .single table .blue a:hover {
+          color: #526df9; }
+    #inner .single table .black {
+      font-weight: 500;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      line-height: 16px; }
+  #inner .single .testimonial {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e6e6e6; }
+    #inner .single .testimonial .cont-person {
+      margin-right: 30px;
+      margin-top: 10px; }
+      #inner .single .testimonial .cont-person .person-img {
+        width: 106px;
+        height: 105px;
+        border-radius: 50%;
+        position: relative; }
+    #inner .single .testimonial span {
+      margin-bottom: 0px;
+      margin-right: 20px; }
 
 /*
 ===============================

@@ -4,11 +4,11 @@
     <section id="inner">
         <div class="inner-bg"></div>
         <div class="container">
-            <?php the_archive_title( '<h1 class="title text-left">', '</h1>' ); ?>
+            <h1 class="title text-left">Tag: <?php single_tag_title(); ?></h1>
             <ul class="breadcumb">
 				<li><a href="<?=home_url();?>">Home</a></li>
-                <li><a href="<?=home_url();?>/blog">Blog</a></li>
-                <?php the_archive_title( '<li class="active">', '</li>' ); ?>
+				<li><a href="<?=home_url();?>/blog">Blog</a></li>
+                <li class="active"><?php single_tag_title(); ?></li>
             </ul>
             <div class="row">
                 <div class="col-md-8">

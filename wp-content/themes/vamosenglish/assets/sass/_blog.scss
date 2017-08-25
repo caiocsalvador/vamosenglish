@@ -180,6 +180,10 @@
             span{
                 background-color: $subtitle-color;
                 color: $white;
+                &.dots{
+                    background-color: transparent;
+                    color: $subtitle-color;
+                }
             }
         }
     }

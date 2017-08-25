@@ -2,6 +2,7 @@
 <html <?php language_attributes();?> >
 	<head>
 		<meta charset="<?php bloginfo('charset') ?>">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!--<meta name="description" content="<?php //bloginfo('description'); ?>">-->
 		<? wp_head(); ?>		
 		<title><?php wp_title('|'); ?></title>
@@ -35,5 +36,15 @@
 					</nav>
 				</div>
 			</div>	
-		</div>		
+		</div>	
 	</header>
+	<div class="cont-fixed-menu">
+		<div class="container">
+			<div class="d-flex justify-content-between">
+				<a href="<?=home_url();?>" class="fixed-logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/fixed-logo.png" alt=""></a>
+				<nav class="fixed-menu align-self-center">
+					<?php wp_nav_menu(array('theme_location'=>'fixed')); ?>		
+				</nav>
+			</div>
+		</div>
+	</div>

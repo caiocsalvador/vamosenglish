@@ -35,10 +35,13 @@ $(document).ready(function () {
 	$(".hide-on-start").removeClass("hide-on-start").addClass("show");
 
 	var posts = $(".animated.post");
-	animateWithDelay(posts);
+	animate(posts);
+
+	/*var posts_home = $(".animated.post.post-home");
+	animateWithDelay(posts_home);*/
 
 	var services = $(".animated.service");
-	animateWithDelay(services);	
+	animate(services);	
 
 	var widgets = $(".widget");
 	animate(widgets);
@@ -49,8 +52,21 @@ $(document).ready(function () {
 		autoplaySpeed: 7000,
 	});
 
-	$(".comment-form-url").hide();
-	
+	$(".comment-form-url").hide();	
+
+	if ($(window).scrollTop() > 200) {
+		$('.cont-fixed-menu').addClass('show');
+   	} else {
+		$('.cont-fixed-menu').removeClass('show');
+   	}
+});
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 200) {
+         $('.cont-fixed-menu').addClass('show');
+    } else {
+         $('.cont-fixed-menu').removeClass('show');
+    }
 });
 
 function animateWithDelay(itens){

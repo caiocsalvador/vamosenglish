@@ -3,7 +3,7 @@
 function enqueue_my_scripts() {
 	/******** STYLES **********/
 	/* FONTS */
-	wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Lora:400i,700i|Montserrat:400,500,500i,700|Source+Sans+Pro:300,400,500,700');
+	wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Lora:400i,700i|Montserrat:300,400,500,500i,700|Source+Sans+Pro:300,400,500,700');
 	/* MAIN */
 	wp_enqueue_style('custom-style', get_template_directory_uri().'/dist/css/style.css');
 

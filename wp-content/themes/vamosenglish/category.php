@@ -23,23 +23,16 @@
 
                         <div class="pagination justify-content-center">
                             <?php 
-                            if($query->max_num_pages > 5 ){
-                                $num = 5;
-                            }
-                            else{
-                                $num = $query->max_num_pages;
-                            }
-                            ?>
-                            <?php 
+								global $wp_query;
                                 echo paginate_links( array(
                                     'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
-                                    'total'        => $num,
+                                    'total'        => $wp_query->max_num_pages,
                                     'current'      => max( 1, get_query_var( 'paged' ) ),
                                     'format'       => '?paged=%#%',
                                     'show_all'     => false,
                                     'type'         => 'list',
-                                    'end_size'     => 2,
-                                    'mid_size'     => 1,
+                                    'end_size'     => 0,
+                                    'mid_size'     => 3,
                                     'prev_next'    => false,
                                     'add_args'     => false,
                                     'add_fragment' => '',
@@ -47,7 +40,7 @@
                             ?>
                         </div>
                         <?php wp_reset_postdata(); ?>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <div id="sidebar">

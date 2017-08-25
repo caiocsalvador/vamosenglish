@@ -145,6 +145,7 @@ header{
             .menu{
                 li{
                     font-family: $subtitle-font;
+                    position: relative;
                     a{
                         font-family: $subtitle-font;
                         padding: 14px 25px;
@@ -164,7 +165,7 @@ header{
                             background-color: $hover-color;
                         }
                     }
-                }
+                }                
             }
         }        
     }
@@ -174,23 +175,156 @@ header{
         }        
     }
     .main-menu{
-        margin-top: 30px;
+        margin-top: 20px;        
         ul{
             li{
+                padding: 15px;
+                position: relative;
+                &:hover{
+                    background-color: $blue;
+                    border-radius: 10px;                    
+                    .sub-menu{
+                        display: block;
+                        opacity: 1;
+                        @include animate(all, 320ms);
+                    }                    
+                }                
                 a{
                     color: $white;
                     font-size: 17px;
-                    margin-left: 35px;
+                    margin-left: 0px;
                     display: inline-block;
-                    font-family: $subtitle-font;                 
+                    font-family: $subtitle-font;   
+                    &:hover{
+                        color: $light-green2;
+                    }              
                 }
                 &:first-child{
                     a{
-                        margin-left: 0px;
+                        margin-left: 0px;                        
                     }
                 }
             }
         }
+        .sub-menu{
+            display: none;
+            opacity: 0;
+            position: absolute;
+            width: 630px;
+            background-color: $blue;
+            padding: 15px 30px;
+            left: 0px;
+            top: 45px;
+            -moz-column-count: 2;
+            -moz-column-gap: 30px;
+            -webkit-column-count: 2;
+            -webkit-column-gap: 30px;
+            column-count: 2;
+            column-gap: 30px;    
+            border-radius: 5px; 
+            @include animate(all, 320ms);
+            li{
+                width: 100%;
+                border-bottom: 1px solid #73a0d7;
+                padding: 15px 0px;
+                border-radius: 0px;
+                &:nth-child(3), &:nth-child(6), &:nth-child(9){
+                    border-bottom: none;
+                }
+                &:hover{
+                    border-radius: 0px;
+                }
+                a{
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    .main-menu > div > ul > li:hover > a{
+        color: $light-green2;
+    }
+}
+
+.cont-fixed-menu{
+    position: fixed;
+    background-color: $blue;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    @include animate(all, 320ms);
+    &.show{
+        opacity: 1;
+        pointer-events: all;
+        @include animate(all, 320ms);
+    }
+    .fixed-logo{
+        display: inline-block;
+        padding: 10px;
+        padding-top: 5px;
+    }
+    .fixed-menu{
+        display: inline-block;
+        ul{
+            display: flex;
+            margin-bottom: 0px;
+            li{
+                padding: 15px;
+                padding-top: 10px;
+                position: relative;
+                &:hover{
+                    .sub-menu{
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+                a{
+                    color: $white;
+                    font-size: 0.8rem;
+                    &:hover{                        
+                        color: $light-green2;                        
+                    }
+                }
+                .sub-menu{
+                    display: none;
+                    opacity: 0;
+                    position: absolute;
+                    width: 630px;
+                    background-color: $blue;
+                    padding: 15px 30px;
+                    left: 0px;
+                    top: 45px;
+                    -moz-column-count: 2;
+                    -moz-column-gap: 30px;
+                    -webkit-column-count: 2;
+                    -webkit-column-gap: 30px;
+                    column-count: 2;
+                    column-gap: 30px;    
+                    border-radius: 5px; 
+                    @include animate(all, 320ms);
+                    li{
+                        width: 100%;
+                        border-bottom: 1px solid #73a0d7;
+                        padding: 15px 0px;
+                        border-radius: 0px;
+                        &:nth-child(3), &:nth-child(6), &:nth-child(9){
+                            border-bottom: none;
+                        }
+                        &:hover{
+                            border-radius: 0px;
+                        }
+                        a{
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .fixed-menu > div > ul > li:hover > a{
+        color: $light-green2;
     }
 }
 

@@ -76,5 +76,3 @@ function excerpt($limit) {
     return $args;
 }
 add_filter ( 'widget_tag_cloud_args', 'myfunc_filter_tag_cloud');
-
-?>
