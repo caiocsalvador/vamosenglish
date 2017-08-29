@@ -2,7 +2,7 @@
 				<div class="container">
 					<p><img src="<?php echo get_template_directory_uri(); ?>/assets/img/gradient-text.png" alt="&iquest;Y ahora, esta listo para comenzar su aventura con nosotros?"></p>
 					<div class="cont-btn">
-						<a href="#" class="btn-reservation">RESERVAR AHORA</a>
+						<a href="https://isai.paytostudy.com/" target="_blank" class="btn-reservation">RESERVAR AHORA</a>
 					</div>			
 				</div>
 			</section>
@@ -14,9 +14,9 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-footer.png" alt="Vamos English">
 					</div>
 					<div class="social-footer">
-						<a href="#" class="social-icon insta"></i></a>
-						<a href="#" class="social-icon tt"></a>
-						<a href="#" class="social-icon face"></a>
+						<a href="https://www.instagram.com/vamosenglish/" target="_blank" class="social-icon insta"></i></a>
+						<a href="https://twitter.com/vamosenglish" target="_blank" class="social-icon tt"></a>
+						<a href="https://www.facebook.com/vamosenglish" target="_blank" class="social-icon face"></a>
 						<a href="#" class="social-icon whats"></a>
 					</div>
 					<div class="infos-footer ml-auto">

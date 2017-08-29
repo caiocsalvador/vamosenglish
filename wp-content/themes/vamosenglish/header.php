@@ -22,9 +22,9 @@
 				<div class="cont-lines d-flex flex-column hide-mobile">
 					<div class="top-header d-flex flex-row justify-content-end">
 						<div class="social-header">
-							<a href="#" class="social-icon shadow-5 insta"></i></a>
-							<a href="#" class="social-icon shadow-5 tt"></a>
-							<a href="#" class="social-icon shadow-5 face"></a>
+							<a href="https://www.instagram.com/vamosenglish/" target="_blank" class="social-icon shadow-5 insta"></i></a>
+							<a href="https://twitter.com/vamosenglish" target="_blank" class="social-icon shadow-5 tt"></a>
+							<a href="https://www.facebook.com/vamosenglish" target="_blank" class="social-icon shadow-5 face"></a>
 							<a href="#" class="social-icon shadow-5 whats"></a>
 						</div>
 						<nav class="top-menu">
