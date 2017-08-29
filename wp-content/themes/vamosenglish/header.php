@@ -41,17 +41,17 @@
 			</div>	
 		</div>	
 	</header>
-	<div class="cont-fixed-menu hide-mobile">
-		<div class="container hide-mobile">
+	<div class="cont-fixed-menu">
+		<div class="container">
 			<div class="d-flex justify-content-between">
 				<a href="<?=home_url();?>" class="fixed-logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/fixed-logo.png" alt=""></a>
-				<nav class="fixed-menu align-self-center">
+				<nav class="fixed-menu align-self-center hide-mobile">
 					<?php wp_nav_menu(array('theme_location'=>'fixed')); ?>		
 				</nav>
-			</div>
-			<div class="show-mobile">
-				<a href="#" onclick="menuMobile(event)"><i class="fa fa-bars" aria-hidden="true"></i></a>
-			</div>
+				<div class="show-mobile">
+					<a href="#" onclick="menuMobile(event)"><i class="fa fa-bars" aria-hidden="true"></i></a>
+				</div>
+			</div>			
 		</div>
 	</div>
 	<div id="side-nav">
