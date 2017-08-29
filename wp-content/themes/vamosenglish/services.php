@@ -38,7 +38,16 @@
                             <? endwhile; ?>
                         <? endif; ?>
                         <?php wp_reset_postdata(); ?>                        
-                    </div>          
+                    </div>        
+                    <div class="row single">      
+                        <div class="col-md-12">
+                            <? $value = get_field( "programa_academico" ); ?>
+                            <?= $value?>
+                            <h4>Más infomacion</h4>
+                            <p>Nuestro equipo está a su disposición. No Dude en contactarnos para cualquier información adicional aclaración que necesite.</p>
+                            <?= do_shortcode('[contact-form-7 id="58" title="Services Contact Form"]'); ?>
+                        </div>               
+                    </div>   
                 </div>
                 <div class="col-md-4">
                     <div id="sidebar">

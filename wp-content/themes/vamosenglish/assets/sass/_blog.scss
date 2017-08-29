@@ -96,6 +96,23 @@
                 font-weight: 700;
                 float: right;
             }
+            .avatar{
+                width: 36px;
+                height: 36px;
+                overflow: hidden;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+            .meta-post{                
+                span{
+                    margin-bottom: 0px;
+                    line-height: 12px;
+                    font-size: 0.7rem;
+                    a{
+                        text-decoration: underline;
+                    }
+                }
+            }
             p{
                 line-height: 30px;
                 a{

@@ -31,25 +31,77 @@
             max-width: 100%;
             height: auto;
         }
+        .avatar{
+            width: 36px;
+            height: 36px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .wp-caption{
+            border: 1px solid $borders-color;
+            padding: 0xp 10px 10px 10px;
+            text-align: left;
+        }
+        .meta-post{                
+            span{
+                margin-bottom: 0px;
+                line-height: 12px;
+                font-size: 0.7rem;
+                a{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .addtoany-cont{
+            margin-top: 50px;
+        }
+        ul{
+            /*list-style-image: url($images-root + 'checkli.png');*/
+            list-style-position: inside;
+            padding-left: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            li{
+                /*list-style-image: url($images-root + 'checkli.png');*/
+                font-family: $text-font;
+                color: $blue;
+                text-align: justify;
+                line-height: 32px;
+                list-style-position: inside;
+                &:before
+                {
+                    content: '✔';
+                    margin-right: .100em;
+                    margin-right: 10px;
+                }
+                h4, h5{
+                    display: inline;
+                    font-family: $text-font;
+                }
+            }
+        }
         .alignright {
             float: right;
+            padding: 10px 0px 10px 10px;
         }
         .alignleft {
             float: left;
+            padding: 10px 10px 10px 0px;
         }
         img.alignright {
-            padding: 10px 0px 10px 10px;
             box-sizing: content-box;
         }
-        img.alignleft {
-            padding: 10px 10px 10px 0px;
+        img.alignleft {            
             box-sizing: content-box;
         }
-        img.aligncenter {
+        .aligncenter{
             padding: 10px 10px 10px 10px;
-            box-sizing: content-box;
             display: block;
             margin: 0 auto;
+        }
+        img.aligncenter {
+            box-sizing: content-box;
         }
         .single-thumb {
             text-align: center;

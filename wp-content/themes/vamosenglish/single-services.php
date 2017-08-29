@@ -17,11 +17,15 @@
 					<? if(have_posts()): ?>
 						<? while(have_posts()): the_post(); ?>
 							<?php get_template_part('template-parts/content-services'); ?>
-						<? endwhile; ?>
-                    <? endif; ?>
                         <h4>Más infomacion</h4>
                         <p>Nuestro equipo está a su disposición. No Dude en contactarnos para cualquier información adicional aclaración que necesite.</p>
                         <?= do_shortcode('[contact-form-7 id="58" title="Services Contact Form"]'); ?>
+                        <div class="addtoany-cont d-flex align-content-between">
+                            <a href="<?= home_url() ?>" class="back-home">HOME</a>
+                            <p class="share-label text-right">Compartir: <?= do_shortcode("[addtoany]")?></p>            
+                        </div> 
+                        <? endwhile; ?>
+                    <? endif; ?>
 					</div>                 
                 </div>
                 <div class="col-md-4">

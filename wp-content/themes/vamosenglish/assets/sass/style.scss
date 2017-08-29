@@ -175,7 +175,7 @@ header{
         }        
     }
     .main-menu{
-        margin-top: 20px;        
+        margin-top: 20px;    
         ul{
             li{
                 padding: 15px;
@@ -845,6 +845,26 @@ footer{
 /* BLOG */
 @import 'blog';
 @import "single";
+
+.share-label{
+    color: $blue;
+    text-transform: uppercase;
+    margin-left: auto;
+}
+.back-home{
+    background-color: $blue;
+    color: $white;
+    line-height: 20px;
+    padding: 5px 30px;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    align-self: center;
+    font-weight: 500;
+    &:hover{
+        color: $white;
+        background-color: $hover-color;
+    }
+}
 
 /*
 ===============================
