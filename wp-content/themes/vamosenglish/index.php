@@ -1,15 +1,35 @@
 <? get_header(); ?>
 <main role="main">	
 	<div class="home-banner">
-		<div class="container hide-on-start">
-			<h2>&iquest;Por que con nosotros?</h2>
-			<p>
-				Somos una <b>agencia especializada</b> en la <b>acomodacion</b> y orientacion estudantil en Dublin, contamos con personal mexicano en <b>Irlanda</b> tanto como en la Cd. De Mexico.<br><br>
-				<b>Vamos English</b> es una agencia de intercambios asociada con <b>ISAI</b>, una de las agencias irlandesas mas reconnocidas en Europa. Trabajamos solo con las <b>mejores escuelas de Dublin</b>
-			</p>
-			<div class="cont-bnt">
-				<a href="#" class="btn-plus">SABER MAS</a>
-			</div>			
+		<div class="slider">
+			<?php $args = array(
+				'posts_per_page'   => -1,
+				'post_type'        => 'slides'
+			);
+			?>
+			<? $query = new WP_Query($args);?>
+			<? if ( $query->have_posts() ): ?>
+				<? while ( $query->have_posts() ) : $query->the_post()?>
+					<? $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');  ?>
+					<div class="slide d-flex align-items-center" style="background-image: url(<?= $featured_img_url ?>">
+						<div class="container hide-on-start">
+							<div class="info-slider">
+								<?php the_content(); ?>
+							</div>
+							
+							<!--<h2>&iquest;Por que con nosotros?</h2>
+							<p>
+								Somos una <b>agencia especializada</b> en la <b>acomodacion</b> y orientacion estudantil en Dublin, contamos con personal mexicano en <b>Irlanda</b> tanto como en la Cd. De Mexico.<br><br>
+								<b>Vamos English</b> es una agencia de intercambios asociada con <b>ISAI</b>, una de las agencias irlandesas mas reconnocidas en Europa. Trabajamos solo con las <b>mejores escuelas de Dublin</b>
+							</p>
+							<div class="cont-bnt">
+								<a href="#" class="btn-plus">SABER MAS</a>
+							</div>-->
+						</div>
+					</div>		
+				<? endwhile; ?>
+			<? endif; ?>
+			<?php wp_reset_postdata(); ?>
 		</div>
 	</div>
 	<section id="blog">

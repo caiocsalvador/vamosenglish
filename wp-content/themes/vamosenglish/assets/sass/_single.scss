@@ -38,11 +38,7 @@
             border-radius: 50%;
             margin-right: 10px;
         }
-        .wp-caption{
-            border: 1px solid $borders-color;
-            padding: 0xp 10px 10px 10px;
-            text-align: left;
-        }
+        
         .meta-post{                
             span{
                 margin-bottom: 0px;
@@ -102,6 +98,25 @@
         }
         img.aligncenter {
             box-sizing: content-box;
+        }
+        .wp-caption{
+            border: 1px solid $borders-color;
+            padding: 0px 10px 10px 10px !important;
+            text-align: left;
+            &.alignright{
+                margin-left: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            &.alignleft{
+                margin-right: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            &.aligncenter{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
         }
         .single-thumb {
             text-align: center;

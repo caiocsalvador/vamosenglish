@@ -70,18 +70,9 @@
                                 </tr>
                                 <tr>
                                     <th scope="row" class="border blue text-right"><a href="<?=home_url()?>/schools/irish-college-english">Irish college of english</a></th>
-                                    <td class="border"></td>
-                                    <td class="border"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/check.png" alt=""></td>
                                     <td class="border"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/check.png" alt=""></td>
                                     <td class="border"></td>
                                     <td class="border"></td>
-                                    <td class="border"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/check.png" alt=""></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="border blue text-right"><a href="<?=home_url()?>/schools/atlas-language-school">Atlas language school</a></th>
-                                    <td class="border"></td>
-                                    <td class="border"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/check.png" alt=""></td>
-                                    <td class="border"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/check.png" alt=""></td>
                                     <td class="border"></td>
                                     <td class="border"></td>
                                     <td class="border"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/check.png" alt=""></td>
@@ -89,10 +80,19 @@
                                 <tr>
                                     <th scope="row" class="border blue text-right"><a href="<?=home_url()?>/schools/isi-dublin">Isi Dublin</a></th>
                                     <td class="border"></td>
-                                    <td class="border"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/check.png" alt=""></td>
+                                    <td class="border"></td>
+                                    <td class="border"></td>
                                     <td class="border"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/check.png" alt=""></td>
                                     <td class="border"></td>
                                     <td class="border"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="border blue text-right"><a href="<?=home_url()?>/schools/ibat">IBAT</a></th>
+                                    <td class="border"></td>
+                                    <td class="border"></td>
+                                    <td class="border"></td>
+                                    <td class="border"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/check.png" alt=""></td>
+                                    <td class="border"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/check.png" alt=""></td>
                                     <td class="border"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/check.png" alt=""></td>
                                 </tr>
                             </tbody>

@@ -189,3 +189,64 @@ function categories_testimonials(){
 }
 
 add_action('init', 'categories_testimonials');
+
+/* SLIDER */
+
+add_action('init', 'create_slides');
+
+function create_slides(){
+	$labels = array(
+		'name' 				=> 'Slider',
+		'singular_name' 	=> 'Slide',
+		'menu_name' 		=> 'Slider',
+		'name_admin_bar' 	=> 'Slider',
+	);
+	$args = array(
+		'labels' 			=> $labels,
+		'show_ui'			=> true,
+		'show_in_menu'		=> true,
+		'capability_type'	=> 'post',
+		'taxonomies'  		=> array( 'categories_slides' ),
+		'hierarchical'		=> false,
+		'menu_icon'			=> 'dashicons-images-alt2',
+		'supports'			=> array('title', 'editor', 'author', 'thumbnail', 'excerpt'),
+		'public' 			=> true,
+      	'has_archive' 		=> true,
+		'rewrite' 			=> true,
+		'menu_position'		=> 5
+	);
+
+	register_post_type('slides', $args);
+}
+
+function categories_slides(){
+
+	//add new taxonomy hierarchical
+
+	$labels = array(
+		'name' => 'Categories (slides)',
+		'singular_name' => 'Category',
+		'search_item' => 'Search Category',
+		'all_items' => 'All Category',
+		'parent_item' => 'Parent Category',
+		'parent_item_colon' => 'Parent Category:',
+		'edit_item' => 'Edit Category',
+		'update_item' => 'Update Category',
+		'add_new_item' => 'Add Category',
+		'new_item_name' => 'New Category',
+		'menu_name' => 'Slides Categories',
+	);
+
+	$args = array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'query_var' => true,
+	);
+
+	register_taxonomy('categories_slides', array('slides'), $args);
+
+}
+
+add_action('init', 'categories_testimonials');

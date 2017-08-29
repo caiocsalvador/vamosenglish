@@ -16746,6 +16746,13 @@ $(document).ready(function () {
 	} else {
 		$('.cont-fixed-menu').removeClass('show');
 	}
+
+	$('.slider').slick({
+		slidesToShow: 1,
+		autoplay: true,
+		autoplaySpeed: 10000,
+		pauseOnHover: false
+	});
 });
 
 $(window).scroll(function () {

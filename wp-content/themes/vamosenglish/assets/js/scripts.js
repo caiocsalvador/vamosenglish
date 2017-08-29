@@ -1,12 +1,11 @@
-
-/* WAYPOINTS */ 
+/* WAYPOINTS */
 window.jQuery = window.$ = require("jquery");
 require('waypoints/lib/jquery.waypoints.js');
 require('slick-carousel/slick/slick.js');
 
 // Detect objectFit support
 if ('objectFit' in document.documentElement.style === false) {
-	
+
 	// assign HTMLCollection with parents of images with objectFit to variable
 	var container = document.getElementsByClassName('post-thumbnail');
 
@@ -41,7 +40,7 @@ $(document).ready(function () {
 	animateWithDelay(posts_home);*/
 
 	var services = $(".animated.service");
-	animate(services);	
+	animate(services);
 
 	var widgets = $(".widget");
 	animate(widgets);
@@ -52,48 +51,56 @@ $(document).ready(function () {
 		autoplaySpeed: 7000,
 	});
 
-	$(".comment-form-url").hide();	
+	$(".comment-form-url").hide();
 
 	if ($(window).scrollTop() > 200) {
 		$('.cont-fixed-menu').addClass('show');
-   	} else {
+	} else {
 		$('.cont-fixed-menu').removeClass('show');
-   	}
+	}
+
+	$('.slider').slick({
+		slidesToShow: 1,
+		autoplay: true,
+		autoplaySpeed: 10000,
+		pauseOnHover: false,
+	});
+
 });
 
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 200) {
-         $('.cont-fixed-menu').addClass('show');
-    } else {
-         $('.cont-fixed-menu').removeClass('show');
-    }
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 200) {
+		$('.cont-fixed-menu').addClass('show');
+	} else {
+		$('.cont-fixed-menu').removeClass('show');
+	}
 });
 
-function animateWithDelay(itens){
-	
-	$(itens).each(function(index, ele){
-		
+function animateWithDelay(itens) {
+
+	$(itens).each(function (index, ele) {
+
 		var self = $(this);
-	
+
 		$(this).waypoint({
-			handler: function(direction){
-				setTimeout(function() {
+			handler: function (direction) {
+				setTimeout(function () {
 					$(ele).addClass("on-view");
-				}, (index+1)*100);
+				}, (index + 1) * 100);
 			},
 			offset: '75%'
 		});
 	});
 }
 
-function animate(itens){
-	
-	$(itens).each(function(index, ele){
-		
+function animate(itens) {
+
+	$(itens).each(function (index, ele) {
+
 		var self = $(this);
-	
+
 		$(this).waypoint({
-			handler: function(direction){
+			handler: function (direction) {
 				$(ele).addClass("on-view");
 			},
 			offset: '75%'
