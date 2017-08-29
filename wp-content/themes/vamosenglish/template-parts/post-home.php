@@ -1,5 +1,5 @@
 <div class="col-md-3">
-    <div class="post animated a-right">
+    <div class="post animated a-left">
         <?php
         $category = get_the_category();
         $firstCategory = $category[0]->cat_name;

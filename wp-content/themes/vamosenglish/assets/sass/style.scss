@@ -427,19 +427,13 @@ header{
 
 #blog{
     padding-top: 70px;
+    width: 100%;
+    overflow-x: hidden;
     padding-bottom: 30px;
     .posts-list{
         margin-top: 60px;
         padding-bottom: 40px;
-        .post{
-            @include transform(translateX(1000px));
-            @include animate(all, 1000ms);
-            opacity: 0;
-            &.on-view{
-                @include transform(translateX(0px));
-                @include animate(all, 1000ms);
-                opacity: 1;
-            }            
+        .post{          
             .post-thumbnail{
                 height: 150px;
                 overflow: hidden;
@@ -993,6 +987,10 @@ footer{
     }
 }
 
+.slick-slider{
+    overflow: hidden;
+}
+
 /*
 ===============================
            SIDEBAR
@@ -1047,6 +1045,12 @@ footer{
 }
 
 @media (max-width: 512px) {
+    .slide{
+        .container{
+            width: 100%;
+            text-align: center;
+        }
+    }
     header .logo img {
         position: absolute;
         top: 0;
