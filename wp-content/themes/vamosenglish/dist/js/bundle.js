@@ -16717,7 +16717,28 @@ if ('objectFit' in document.documentElement.style === false) {
 	}
 }
 
+function menuMobile(e) {
+	console.log("ae");
+	e.preventDefault();
+	var sidenav = $("#side-nav");
+	if (sidenav.hasClass('active')) {
+		sidenav.removeClass('active');
+		$("#sidenav-overlay").remove();
+	} else {
+		$("body").append('<div id="sidenav-overlay"></div>');
+		$("#sidenav-overlay").addClass('active');
+		sidenav.addClass('active');
+	}
+}
+
+window.menuMobile = menuMobile;
+
 $(document).ready(function () {
+
+	$("body").on("click", "#sidenav-overlay", function () {
+		menuMobile(event);
+	});
+
 	//Show Itens when loaded
 	$(".hide-on-start").removeClass("hide-on-start").addClass("show");
 

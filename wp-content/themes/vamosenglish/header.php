@@ -19,7 +19,7 @@
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_vamos_english.gif?<?=$time?>" alt="" style="width:250px; height:214px"/>
 					</a>
 				</h1>
-				<div class="cont-lines d-flex flex-column">
+				<div class="cont-lines d-flex flex-column hide-mobile">
 					<div class="top-header d-flex flex-row justify-content-end">
 						<div class="social-header">
 							<a href="#" class="social-icon shadow-5 insta"></i></a>
@@ -35,16 +35,28 @@
 						<?php wp_nav_menu(array('theme_location'=>'main')); ?>		
 					</nav>
 				</div>
+				<div class="show-mobile">
+					<a href="#" onclick="menuMobile(event)"><i class="fa fa-bars" aria-hidden="true"></i></a>
+				</div>
 			</div>	
 		</div>	
 	</header>
-	<div class="cont-fixed-menu">
-		<div class="container">
+	<div class="cont-fixed-menu hide-mobile">
+		<div class="container hide-mobile">
 			<div class="d-flex justify-content-between">
 				<a href="<?=home_url();?>" class="fixed-logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/fixed-logo.png" alt=""></a>
 				<nav class="fixed-menu align-self-center">
 					<?php wp_nav_menu(array('theme_location'=>'fixed')); ?>		
 				</nav>
 			</div>
+			<div class="show-mobile">
+				<a href="#" onclick="menuMobile(event)"><i class="fa fa-bars" aria-hidden="true"></i></a>
+			</div>
 		</div>
+	</div>
+	<div id="side-nav">
+		<a href="#" class="side-close" onclick="menuMobile(event)"><i class="fa fa-times" aria-hidden="true"></i></a>
+		<nav>
+			<?php wp_nav_menu(array('theme_location'=>'mobile')); ?>
+		</nav>
 	</div>

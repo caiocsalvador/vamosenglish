@@ -16,7 +16,13 @@
                     <div class="single">
 					<? if(have_posts()): ?>
 						<? while(have_posts()): the_post(); ?>
-							<?php get_template_part('template-parts/content-services'); ?>
+                            <?php get_template_part('template-parts/content-services'); ?>
+                            <div class="cont-link-post">
+                                <div class="addtoany-cont d-flex align-content-between align-items-center">
+                                    <a href="<?= home_url() ?>" class="back-home">HOME</a>
+                                    <p class="share-label text-right">Compartir: <?= do_shortcode("[addtoany]")?></p>            
+                                </div> 
+                            </div> 
 						<? endwhile; ?>
                     <? endif; ?>
 					</div>                 

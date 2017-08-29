@@ -46,7 +46,13 @@
                             <h4>Más infomacion</h4>
                             <p>Nuestro equipo está a su disposición. No Dude en contactarnos para cualquier información adicional aclaración que necesite.</p>
                             <?= do_shortcode('[contact-form-7 id="58" title="Services Contact Form"]'); ?>
-                        </div>               
+                        </div>    
+                        <div class="cont-link-post">
+                            <div class="addtoany-cont d-flex align-content-between align-items-center">
+                                <a href="<?= home_url() ?>" class="back-home">HOME</a>
+                                <p class="share-label text-right">Compartir: <?= do_shortcode("[addtoany]")?></p>            
+                            </div> 
+                        </div>           
                     </div>   
                 </div>
                 <div class="col-md-4">

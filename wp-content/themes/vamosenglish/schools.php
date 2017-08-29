@@ -97,11 +97,12 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="cont-link-post d-flex justify-content-between">
-                            <div class="addtoany-cont">
-                                <?= do_shortcode("[addtoany]")?>
-                            </div>
-                        </div>
+                        <div class="cont-link-post">
+                            <div class="addtoany-cont d-flex align-content-between align-items-center">
+                                <a href="<?= home_url() ?>" class="back-home">HOME</a>
+                                <p class="share-label text-right">Compartir: <?= do_shortcode("[addtoany]")?></p>            
+                            </div> 
+                        </div> 
                         <? endwhile; ?>
                     <? endif; ?>
                     </div>                 
