@@ -9,7 +9,7 @@
             </a>
         </div>
         <?php endif; ?>
-        <h3><a href="#"><?php the_title(); ?></a></h3>
-        <p><a href="#"><?=excerpt(15) ?></a></p>
+        <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+        <p><a href="<?php the_permalink() ?>"><?=excerpt(15) ?></a></p>
     </div>
 </div>
