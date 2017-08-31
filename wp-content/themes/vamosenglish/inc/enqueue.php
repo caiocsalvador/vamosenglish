@@ -9,8 +9,8 @@ function enqueue_my_scripts() {
 	wp_enqueue_style('custom-style', get_template_directory_uri().'/dist/css/style.css');
 
 	/******** SCRIPTS **********/
-	/* JQUERY */
-	wp_deregister_script('jquery');
+	/* JQUERY 
+	wp_deregister_script('jquery');*/
 
 	/* Font Awesome */
 	wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/aaabae4c97.js', array(), null, true);

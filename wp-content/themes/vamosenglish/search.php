@@ -13,7 +13,6 @@
                 <div class="col-md-8">
                     <div class="posts-list">
 						<? $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; ?>
-						<? var_dump($paged); ?>
                         <? if ( have_posts() ): ?>
 							<? while ( have_posts() ) : the_post()?>
 								<? if($post->post_type == "post"): ?>
