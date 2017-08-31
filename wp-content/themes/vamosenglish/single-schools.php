@@ -8,7 +8,7 @@
             <h1 class="title text-left"><?=$page_title?></h1>
             <ul class="breadcumb">
                 <li><a href="<?=home_url();?>">Home</a></li>
-				<li><a href="<?=home_url();?>/servicios">Servicios</a></li>
+				<li><a href="<?=home_url();?>/schools">Escuelas</a></li>
 				<li class="active"><?=$page_title?></li>
             </ul>
             <div class="row">
@@ -17,10 +17,12 @@
 					<? if(have_posts()): ?>
 						<? while(have_posts()): the_post(); ?>
                             <?php get_template_part('template-parts/content-services'); ?>
+                            <a href="<?= home_url() ?>/contact" class="back-home schools">CONTACTO</a>
+                            <a href="https://isai.paytostudy.com/" target="_blank" class="back-home schools">RESERVAR</a>
                             <div class="cont-link-post">
                                 <div class="addtoany-cont d-flex align-content-between align-items-center">
                                     <a href="<?= home_url() ?>" class="back-home">HOME</a>
-                                    <p class="share-label text-right">Compartir: <?= do_shortcode("[addtoany]")?></p>            
+                                    <p class="share-label text-right">Compartir: <?= do_shortcode("[addtoany]")?></p>
                                 </div> 
                             </div> 
 						<? endwhile; ?>

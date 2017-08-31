@@ -31,7 +31,6 @@ if ('objectFit' in document.documentElement.style === false) {
 
 
 function menuMobile(e){
-	console.log("ae");
 	e.preventDefault();
 	var sidenav = $("#side-nav");
 	if(sidenav.hasClass('active')){
@@ -59,9 +58,6 @@ $(document).ready(function () {
 	var posts = $(".animated.post");
 	animate(posts);
 
-	/*var posts_home = $(".animated.post.post-home");
-	animateWithDelay(posts_home);*/
-
 	var services = $(".animated.service");
 	animate(services);
 
@@ -85,8 +81,9 @@ $(document).ready(function () {
 	$('.slider').slick({
 		slidesToShow: 1,
 		autoplay: true,
-		autoplaySpeed: 10000,
+		autoplaySpeed: 6000,
 		pauseOnHover: false,
+		dots: true,
 	});
 
 });

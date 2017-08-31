@@ -4,12 +4,12 @@
     </div>
     <div class="cont-person">
         <div class="person-img shadow-5">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/person.png" alt="Person Photo">
+            <?php the_post_thumbnail("small"); ?>
         </div>
     </div>
     <div class="testimonial-text">
         <div class="test">
-            <?php the_content(); ?>         
+            <?php the_content(); ?>
         </div>
         
         <div class="cont-signature d-flex flex-row">
